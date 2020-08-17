@@ -1,0 +1,41 @@
+{
+  "Name": "speedtest_um",
+  "CreationDate": "2019-12-5",
+  "Commands": [
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return new Date().getTime()",
+      "Value": "now"
+    },
+    {
+      "Command": "open",
+      "Target": "https://speedtest.unitymedia.de/#speedtest_init",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/main/div/div[2]/div[1]/div/div/img",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "90000",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/main/div/div[3]/div[4]/div/div[2]/div",
+      "Value": ""
+    },
+    {
+      "Command": "captureEntirePageScreenshot",
+      "Target", "speedtest_um_${now}",
+      "Value", ""
+    },
+    {
+      "Command": "localStorageExport",
+      "Target", "speedtest_um_${now}.png",
+      "Value", "#deleteAfterExport"
+    }
+  ]
+}
